@@ -3,10 +3,10 @@ class Player
   def hand
     puts "数字を入力してください。"
     puts "0: グー\n1: チョキ\n2: パー"
-    input_hand = gets.to_i
+    input_hand = gets.chomp　#to_iは整数に変換するので、文字列に変換する.chompを使用。
 
-        if input_hand == 0 || input_hand == 1 || input_hand == 2
-          return input_hand
+        if input_hand == "0" || input_hand == "1" || input_hand == "2"
+          return input_hand.to_i   #if文の数字を文字列で捉え、条件式に合うものを.to_iで数値に変換。
         else
           hand
         end
