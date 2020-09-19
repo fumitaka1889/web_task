@@ -4,10 +4,13 @@ class Player
     puts "0:グー, 1:チョキ, 2:パー"
     input_hand = gets.chomp
 
-    if input_hand == "0" || input_hand == "1" || input_hand == "2"
-      return input_hand.to_i
-    else
-      hand
+    while true
+      if input_hand == "0" || input_hand == "1" || input_hand == "2"
+        return input_hand.to_i
+      else
+        puts "0〜2の数字を入力してください。"
+        input_hand = gets.chomp
+      end
     end
   end
 end
